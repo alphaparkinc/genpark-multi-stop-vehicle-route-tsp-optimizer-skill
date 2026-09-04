@@ -1,0 +1,39 @@
+{
+  "name": "genpark-multi-stop-vehicle-route-tsp-optimizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-stop vehicle delivery route optimizer solving traveling salesperson problems (TSP) to minimize drive time and fuel.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "geospatial",
+  "tags": [
+    "tsp-solver",
+    "route-optimization",
+    "logistics-fleet",
+    "delivery-routing",
+    "osrm"
+  ],
+  "inputs": {
+    "depot_coords": {
+      "type": "array"
+    },
+    "waypoints": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "routing_id": {
+      "type": "string"
+    },
+    "optimal_waypoint_sequence": {
+      "type": "array"
+    },
+    "total_route_distance_km": {
+      "type": "number"
+    },
+    "turn_by_turn_manifest_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
